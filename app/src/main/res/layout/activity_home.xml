@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff4500"
+    tools:context=".HomeActivity">
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="257dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_search"
+        android:backgroundTint="#fff"
+        app:layout_constraintEnd_toStartOf="@+id/ib_cart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ib_cart"
+        android:layout_width="71dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/searchView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_add_shopping_cart_25"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <ListView
+        android:id="@+id/lv_product"
+        android:layout_width="406dp"
+        android:layout_height="457dp"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/iv_notify"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPager"
+        tools:ignore="MissingConstraints" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView2"-->
+<!--        android:layout_width="370dp"-->
+<!--        android:layout_height="163dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/imageButton3"-->
+<!--        app:srcCompat="@drawable/banner1"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="360dp"
+        android:layout_height="163dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ib_cart" />
+
+    <ImageView
+        android:id="@+id/iv_account"
+        android:layout_width="83dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="5dp"
+        android:background="#ffffff"
+        android:paddingRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_notify"
+        app:srcCompat="@drawable/baseline_account_box_24"
+        tools:ignore="ContentDescription,RtlHardcoded,RtlSymmetry" />
+
+    <ImageView
+        android:id="@+id/iv_video"
+        android:layout_width="76dp"
+        android:layout_height="44dp"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_notify"
+        app:layout_constraintStart_toEndOf="@+id/iv_chat"
+        app:srcCompat="@drawable/baseline_live_tv_24"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/iv_home"
+        android:layout_width="83dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="5dp"
+        android:background="#ffffff"
+        android:paddingLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_chat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baseline_home_24"
+        tools:ignore="ContentDescription,RtlHardcoded,RtlSymmetry" />
+
+    <ImageView
+        android:id="@+id/iv_chat"
+        android:layout_width="86dp"
+        android:layout_height="44dp"
+        android:background="#ffffff"
+        android:paddingTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_video"
+        app:layout_constraintStart_toEndOf="@+id/iv_home"
+        app:srcCompat="@drawable/baseline_chat_24"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/iv_notify"
+        android:layout_width="82dp"
+        android:layout_height="44dp"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_account"
+        app:layout_constraintStart_toEndOf="@+id/iv_video"
+        app:srcCompat="@drawable/baseline_notifications_24"
+        tools:ignore="ContentDescription" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
